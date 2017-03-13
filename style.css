@@ -63,8 +63,9 @@ li{
 }
 .head-right button{
 	float: left;
-    margin: 0 6px 0 0;
-    padding: 13px 15px 13.5px 16px;
+	width:62px;
+	height: 50px;
+	margin: 0 6px 0 0;
     background-color: #00AEBE;
 	border: none;
 	font-size: 18px;
