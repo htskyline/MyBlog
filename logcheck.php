@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("conn.php");
+echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 if(!empty($_POST['submit']))
 {
 	$logName = $_POST['username'];
@@ -14,7 +15,7 @@ if(!empty($_POST['submit']))
 	}
 	else
 	{
-		echo "no!";
+		echo "<script>alert('用户名错误或密码错误！');history.go(-1);</script>";
 	}
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("conn.php");
+echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 function delete($id)
 {
 	$sql="select * from content where id='$id'";

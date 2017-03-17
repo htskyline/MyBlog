@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("conn.php");//引入连接数据库
+echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
 if (!empty($_POST['sub'])) 
 {
 	$title=$_POST['title'];
