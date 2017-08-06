@@ -13,13 +13,13 @@ include("conn.php");
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 </head>
 <body>
-<div data-role="page" id="pageone" style="background:url(http://othusu0rr.bkt.clouddn.com/Photo-jimeimei_bg.jpg) 50% 0 no-repeat;background-size:cover">
+<div data-role="page" id="pageone" style="background:url(http://othusu0rr.bkt.clouddn.com/Photo-jnumate_bg.jpg) 50% 0 no-repeat;background-size:cover">
 
     <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="a">
         <div data-role="navbar">
             <ul>
                 <li><a href="https://www.jnugeek.cn" target="_blank">网研首页</a></li>
-                <li><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAwOTEwMjI0Ng==#wechat_redirect" target="_blank">暨妹妹</a></li>
+                <li><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIyMzE0NDY2Ng==#wechat_redirect" target="_blank">南同学</a></li>
                 <li><a href="http://fee.jnu.edu.cn" target="_blank">在线缴学费</a></li>
             </ul>
         </div>
@@ -41,14 +41,14 @@ include("conn.php");
                 <li data-theme="d">代收医保费：<span style="float:right;"><?php echo $_SESSION['medicare']; ?></span></li>
                 <li data-theme="d">合计：<span style="float:right;"><?php echo $_SESSION['fee']; ?></span></li>
             </ul><br><br>
-    		<button onclick="location='logout.php';return;" data-icon="back">点击重新输入学号&nbsp&nbsp&nbsp&nbsp</button>
+    		<button onclick="location='logout2.php';return;" data-icon="back">点击重新输入学号&nbsp&nbsp&nbsp&nbsp</button>
         </div>
 	<?php
 		}
 		else
 		{
 	?>
-        <form action="regcheck.php" method="post" data-ajax="false">
+        <form action="regcheck2.php" method="post" data-ajax="false">
             <div data-role="fieldcontain">
                 <label style="vertical-align:middle; color:white;text-shadow:none;font-weight:bold;" for="ID">学号：</label>
                 <input type="text" placeholder="请填入正确的学号" name="ID" id="ID">    
@@ -60,7 +60,7 @@ include("conn.php");
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">支持本科、硕士、博士、双学位学宿费查询</span></li>
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">暂不支持新生学费查询</span></li>
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">数据更新至2017.7.10</span></li>
-            <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">查询结果谨供参考，暨妹妹对信息的真实性、可靠性不作任何承诺，查询者对此进行的任何行为结果自负</span></li>
+            <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">查询结果谨供参考，南同学对信息的真实性、可靠性不作任何承诺，查询者对此进行的任何行为结果自负</span></li>
         </form>
 	<?php
 		}
