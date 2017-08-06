@@ -16,12 +16,11 @@ include("conn.php");
 <div data-role="page" id="pageone" style="background:url(http://i1.piimg.com/1949/f2fd03ad31035deb.jpg) 50% 0 no-repeat;background-size:cover">
 
     <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="a">
-        <h1>暨南大学2017年度学宿费查询</h1>
         <div data-role="navbar">
             <ul>
-                <li><a href="https://www.jnugeek.cn">网研首页</a></li>
-                <li><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAwOTEwMjI0Ng==#wechat_redirect">暨妹妹</a></li>
-                <li><a href="http://fee.jnu.edu.cn">在线缴学费</a></li>
+                <li><a href="https://www.jnugeek.cn" target="_blank">网研首页</a></li>
+                <li><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAwOTEwMjI0Ng==#wechat_redirect" target="_blank">暨妹妹</a></li>
+                <li><a href="http://fee.jnu.edu.cn" target="_blank">在线缴学费</a></li>
             </ul>
         </div>
     </div>
