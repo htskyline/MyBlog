@@ -35,6 +35,7 @@ include("conn.php");
                 <li data-theme="c">姓名：<span style="float:right;"><?php echo $_SESSION['name']; ?></span></li>
                 <li data-theme="c">学号：<span style="float:right;"><?php echo $_SESSION['id']; ?></span></li>
                 <li data-theme="c">专业：<span style="float:right;"><?php echo $_SESSION['major']; ?></span></li>
+                <li data-theme="c">类别：<span style="float:right;"><?php echo $_SESSION['item']; ?></span></li>
                 <li data-theme="d">学费：<span style="float:right;"><?php echo $_SESSION['tuition']; ?></span></li>
                 <li data-theme="d">住宿费：<span style="float:right;"><?php echo $_SESSION['dorm']; ?></span></li>
                 <li data-theme="d">代收医保费：<span style="float:right;"><?php echo $_SESSION['medicare']; ?></span></li>

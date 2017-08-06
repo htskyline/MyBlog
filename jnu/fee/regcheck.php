@@ -17,7 +17,8 @@ if(!empty($_POST['submit']))
 		$_SESSION['tuition']=$result['tuition'];
 		$_SESSION['dorm']=$result['dorm'];
 		$_SESSION['medicare']=$result['medicare'];
-		$_SESSION['fee']=$result['fee'];	
+		$_SESSION['fee']=$result['fee'];
+		$_SESSION['item']=$result['item'];	
 		echo "<script>location='fee.php';</script>";	
 	} 
 	else if(!preg_match($pcreID,$regID))
