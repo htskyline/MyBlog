@@ -18,6 +18,7 @@ if(!empty($_POST['submit']))
 		$_SESSION['dorm']=$result['dorm'];
 		$_SESSION['medicare']=$result['medicare'];
 		$_SESSION['fee']=$result['fee'];
+		$_SESSION['credit']=$result['credit'];
 		$_SESSION['item']=$result['item'];	
 		echo "<script>location='fee2.php';</script>";	
 	} 
