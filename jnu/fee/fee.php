@@ -91,8 +91,9 @@ include("conn.php");
             <br><br><br>
             <span style="vertical-align:middle; color:white; text-shadow:none; font-weight:bold; font-size:14px;">注意事项:</span>
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">支持本科、硕士、博士、双学位、延期毕业留校修读预收学宿费查询</span></li>
+            <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">目前仅支持本部及番禺校区查询</span></li>
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">暂不支持新生学费查询</span></li>
-            <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">数据更新至2017.7.10</span></li>
+            <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">数据来源为2017年7月10号及25号学校官网公布数据</span></li>
             <li style="color:white;"><span style="vertical-align:middle; text-shadow:none; font-size:14px;">查询结果谨供参考，暨妹妹对信息的真实性、可靠性不作任何承诺，查询者对此进行的任何行为结果自负</span></li>
         </form>
 	<?php
