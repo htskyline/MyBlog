@@ -14,17 +14,17 @@ if(!empty($_POST['submit']))
 		echo "<script>alert('用户名已存在！');history.go(-1);</script>";
 		exit();	
 	} 
-	if(!preg_match($pcreName,$regName))
+	else if(!preg_match($pcreName,$regName))
 	{
 		echo "<script>alert('用户名不合法！');history.go(-1);</script>";	
 		exit();
 	}
-	if($_POST['userpwd2']!=$regPwd)
+	else if($_POST['userpwd2']!=$regPwd)
 	{
 		echo "<script>alert('两次输入密码不相同！');history.go(-1);</script>";
 		exit();	
 	}
-	if(!preg_match($pcrePwd,$regPwd))
+	else if(!preg_match($pcrePwd,$regPwd))
 	{
 		echo "<script>alert('密码不合法！');history.go(-1);</script>";
 		exit();

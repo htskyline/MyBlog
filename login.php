@@ -51,7 +51,7 @@ include("del.php")
 						<br>
 					</div>
 					<div class="input-bottom">
-						<input type="submit" name="submit" value="登录" style="cursor:pointer; background:#00AEBE; border:none; border-radius:3px; 
+						<input type="submit" name="submit" value="登录" style="cursor:pointer; background:#1BB8BD; border:none; border-radius:3px; 
 						height:40px; color:#fff; font-size:16px; width:100%;" onmouseover="overButton(this)" onmouseout="outButton(this)">
 					</div>
 				</form>
