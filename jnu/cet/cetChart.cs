@@ -12,7 +12,7 @@ $("document").ready(function(){
 		var option = {
 					title : {
 					text: '四六级成绩区段',
-					subtext: '2017上半年度\n@暨妹妹 | @南同学',
+					subtext: '2017上半年度\n@暨妹妹',
 					x:'center'
 					},
 					tooltip : {
@@ -26,7 +26,7 @@ $("document").ready(function(){
 					data:['学神(610 - 710)','学霸(550 - 610)','学民(425 - 550)','学弱(350 - 425)','学渣(  0 - 350)']
 					},
 					toolbox: {
-					show : true,
+					show : false,
 					feature : {
 						mark : {show: true},
 						dataView : {show: false, readOnly: false},

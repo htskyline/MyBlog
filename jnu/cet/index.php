@@ -38,7 +38,7 @@ $title="成绩查询 | CET";
     if(!$names&&!isset($_SESSION['name']))//判断有无提交或者有无session
     {
     ?>
-        <form name="queryCet" method="post" action="">
+        <form id="queryCet" name="queryCet" method="post" action="">
             <div class="weui-cells__title">2017年上半年</div>
             <div class="weui-cells weui-cells_form">
                 <div class="weui-cell">
@@ -190,6 +190,7 @@ $title="成绩查询 | CET";
                         </div>
                         <div class="weui-msg__opr-area">
                             <p class="weui-btn-area">
+                                <a href="javascript:;" class="weui-btn weui-btn_primary" onclick="location='logout.php';">重新查询</a>
                                 <a href="javascript:;" class="weui-btn weui-btn_default closeAll">关闭</a>
                             </p>
                         </div>
