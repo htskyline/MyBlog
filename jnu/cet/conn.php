@@ -1,9 +1,4 @@
 <?php
-@mysql_connect("localhost","root","tian6660401")or die("mysql连接失败");
-@mysql_select_db("jnu")or die("db连接失败");
-//mysql_set_charset("gbk");
-mysql_query("set names utf8");
-ini_set('date.timezone', 'Asia/Shanghai');
 
 function cetPost($ids,$name)//设置post信息
 {
@@ -24,39 +19,10 @@ function cetPost($ids,$name)//设置post信息
     {
         return 100;
 	}
-	else{
+	else
+	{
 		return 200;
 	}
-}
-
-function sortArr($text)//整理成有9个有效元素的数组
-{
-	$preg1 = "/\<td.+?\>(.+?)\<\/td\>/";
-	$preg2 = "/<td.*?>(<span.*?>)?(?'name'.+?)(<\/span>)?<\/td>/";
-	$result = preg_match_all($preg2, $text, $arr);
-	array_walk_recursive($arr, function(&$v) { $v = trim($v); });//去除数组元素两旁空白
-	$arr0 = $arr[0];
-	preg_match_all("/\d+/",$arr0[5],$arr1);
-	preg_match_all("/\d+/",$arr0[6],$arr2);
-	preg_match_all("/\d+/",$arr0[7],$arr3);
-	for($x=0; $x<=9; $x++)
-	{
-		switch ($x)
-		{
-			case 5:
-				$arrSort[5] = $arr1[0][2];
-				break;
-			case 6:
-				$arrSort[6] = $arr2[0][2];
-				break;
-			case 7:
-				$arrSort[7] = $arr3[0][2];
-				break;
-			default:
-				$arrSort[$x] = $arr0[$x];
-		}
-	}
-	return $arrSort;
 }
 
 function cetCurl($url , $post = '' , $referer = '' , $ip = '8.8.8.8')//Curl模拟登陆 
@@ -88,4 +54,61 @@ function cetCurl($url , $post = '' , $referer = '' , $ip = '8.8.8.8')//Curl模�
 	}
 }
 
+function sortArr($text)//整理成有9个有效元素的数组
+{
+	$preg1 = "/\<td.+?\>(.+?)\<\/td\>/";
+	$preg2 = "/<td.*?>(<span.*?>)?(?'name'.+?)(<\/span>)?<\/td>/";
+	$result = preg_match_all($preg2, $text, $arr);
+	array_walk_recursive($arr, function(&$v) { $v = trim($v); });//去除数组元素两旁空白
+	$arrTemp = $arr[0];
+	preg_match_all("/[\x{4e00}-\x{9fa5}]+/u",$arrTemp[0],$arr0);
+	preg_match_all("/[\x{4e00}-\x{9fa5}]+/u",$arrTemp[1],$arr1);
+	preg_match_all("/[\x{4e00}-\x{9fa5}]+/u",$arrTemp[2],$arr2);
+	preg_match_all("/[1-9]\d+/",$arrTemp[3],$arr3);
+	preg_match_all("/[1-9]\d+/",$arrTemp[4],$arr4);
+	preg_match_all("/[1-9]\d+/",$arrTemp[5],$arr5);
+	preg_match_all("/[1-9]\d+/",$arrTemp[6],$arr6);
+	preg_match_all("/[1-9]\d+/",$arrTemp[7],$arr7);
+	preg_match_all("/[1-9]\d+/",$arrTemp[8],$arr8);
+	preg_match_all("/^[A-Za-z]+$/",$arrTemp[9],$arr9);
+	for($x=0; $x<=9; $x++)
+	{
+		switch ($x)
+		{
+			case 0:
+				$arrSort[0] = $arr0[0][0];//姓名
+				break;
+			case 1:
+				$arrSort[1] = $arr1[0][0];//学校
+				break;			
+			case 2:
+				$arrSort[2] = $arr2[0][0];//考试等级
+				break;
+			case 3:
+				$arrSort[3] = $arr3[0][0];//string型的准考证号
+				break;
+			case 4:
+				$arrSort[4] = intval($arr4[0][0]);//转换为整形后的笔试总分
+				break;
+			case 5:
+				$arrSort[5] = intval($arr5[0][2]);//转换为整形后的听力分
+				break;
+			case 6:
+				$arrSort[6] = intval($arr6[0][2]);//转换为整形后的阅读分
+				break;
+			case 7:
+				$arrSort[7] = intval($arr7[0][2]);//转换为整形后的写作和翻译分
+				break;
+			case 8:
+				$arrSort[8] = $arr8[0][0];//string型的口试准考证号
+				break;
+			case 9:
+				$arrSort[9] = $arr9[0][0];//A/B/C口试等级
+				break;
+			default:
+				$arrSort[$x] = $arrTemp[$x];//无用
+		}
+	}
+	return $arrSort;
+}
 ?>

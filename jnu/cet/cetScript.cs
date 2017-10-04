@@ -59,8 +59,6 @@ $("document").ready(function(){
 	//各种点击事件绑定
 	$(".returnBefore").click(function(){//返回
 		history.go(-1);
-		//$(".weui-msg").hide();
-		//$(".index-content-padded").show();
 	});
 
 	$(".closeAll").click(function(){//关闭网页
@@ -74,12 +72,6 @@ $("document").ready(function(){
 			window.open("", "_self");
 			window.close();
 		};
-	});
-	/*
-	$('.weui-tabbar_item').on('click', function () {
-      $(this).addClass('weui-bar_item--on').siblings().removeClass('weui-bar_item--on');
-      var tabId = $(this).attr('href');
-      $('.weui-tab_bd').find(tabId).addClass('weui-tab_bd_item--active').siblings().removeClass('weui-tab_bd_item--active');
-    });
-	*/
+	});	
+
 });

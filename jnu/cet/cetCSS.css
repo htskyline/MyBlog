@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     -webkit-tap-highlight-color: transparent;
+    background-color: #f8f8f8;
   }
 .index-title {
   text-align: center;
@@ -15,6 +16,25 @@ body, html {
 .index-content-padded {
   padding: 15px;
 }
+header{
+  flex: 0 0 auto;
+}
 #queryError {
   display: none;
 }
+#wapper{  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#main-content{
+  flex: 1 0 auto;
+  margin: 40px 0 0 0;
+}
+#footer{
+  flex: 0 0 auto;  
+}
+#queryTabbar{
+  position:fixed;
+  bottom:0;
+}    
