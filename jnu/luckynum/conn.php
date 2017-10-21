@@ -1,5 +1,5 @@
 <?php
-@mysql_connect("localhost","root","tian6660401")or die("mysql连接失败");
+@mysql_connect("localhost","root","test123456")or die("mysql连接失败");
 @mysql_select_db("jnu")or die("db连接失败");
 //mysql_set_charset("gbk");
 mysql_query("set names utf8");
